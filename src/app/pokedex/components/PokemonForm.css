@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.form {
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.form_container {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Estilo base*/
+.form_input {
+	padding: 0.7rem 1.2rem;
+	border: 2px solid black;
+	border-radius: 10px;
+	font-size: 0.9rem;
+	font-family: 'Press Start 2P', monospace;
+	outline: none;
+	color: #2a2a2a;
+	background-color: #fefefe;
+	transition: all 0.3s ease-in-out;
+	box-shadow: inset 4px 4px 0 0 #c0c0c0;
+}
+.form_select {
+	padding: 0.7rem 1.2rem;
+	border: 2px solid black;
+	border-radius: 10px;
+	font-size: 0.9rem;
+	font-family: 'Press Start 2P', monospace;
+	outline: none;
+	color: #2a2a2a;
+	background-color: #d62828;
+	transition: all 0.3s ease-in-out;
+	filter: drop-shadow(3px 3px 0 #000);
+}
+
+/*Select*/
+.form_select {
+	cursor: pointer;
+	background-image: url('https://www.svgrepo.com/show/7228/pokeball.svg');
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	background-size: 20px;
+	padding-right: 2.5rem;
+}
+
+/*Colores en modo hover*/
+.form_input:hover {
+	background-color: #fff4c3;
+}

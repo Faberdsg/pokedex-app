@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Press Start 2P', monospace;
+	color: #fff;
+	background: none;
+	position: relative;
+	overflow-x: hidden;
+	min-height: 100vh;
+	z-index: 0;
+}
+
+/*Fondo difuminado detrás del contenido*/
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-image: url('/images/fondo.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	filter: blur(8px) brightness(0.9);
+	z-index: -10;
+	pointer-events: none;
+}
+
+/*Oscurecimiento opcional*/
+body::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: -9;
+	pointer-events: none;
+}
+
+.home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.home_container {
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 40px;
+	border-radius: 20px;
+	text-align: center;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+	animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.home_logo {
+	width: 100px;
+	margin: 0 auto 20px auto;
+	display: block;
+	animation: spinLogo 1s ease-out;
+}
+
+h1 {
+	font-size: 3.5rem;
+	margin-bottom: 1rem;
+	color: #fff;
+	letter-spacing: 2px;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+}
+
+.home_link,
+.home_button {
+	display: inline-block;
+	margin: 10px 10px;
+	padding: 12px 24px;
+	background-color: #fff;
+	color: #e3350d;
+	font-weight: bold;
+	border: none;
+	border-radius: 9999px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.home_link:hover,
+.home_button:hover {
+	background-color: #fcd770;
+	color: #000;
+}
+
+span {
+	margin: 0 5px;
+	font-weight: bold;
+}
+
+/*Animaciones*/
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+}
+
+.fade-out {
+	animation: fadeOut 0.8s forwards;
+}
+
+@keyframes spinLogo {
+	0% {
+		transform: rotate(0deg) scale(0.8);
+		opacity: 0;
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+		opacity: 1;
+	}
+}
