@@ -15,7 +15,7 @@ function Home() {
 		const hasPlayedIntro = localStorage.getItem('introPlayed');
 
 		if (!hasPlayedIntro) {
-			const audio = new Audio('/public/sounds/pokemon.intro.mp3');
+			const audio = new Audio('/sounds/pokemon.intro.mp3');
 			audio.volume = 0.5;
 			audio
 				.play()
@@ -31,7 +31,7 @@ function Home() {
 	useEffect(() => {
 		if (isExiting) {
 			const timeout = setTimeout(() => {
-				const audio = new Audio('/public/sounds/pc-on.mp3');
+				const audio = new Audio('/sounds/pc-on.mp3');
 				audio.volume = 0.5;
 				audio.play().catch(() => {});
 
@@ -52,7 +52,7 @@ function Home() {
 		<div className="home">
 			<div className={`home_container ${isExiting ? 'fade-out' : ''}`}>
 				<img
-					src="/public/images/pokeballicon.png"
+					src="/images/pokeballicon.png"
 					alt="Pokedex Logo"
 					className="home_logo"
 				/>
@@ -64,7 +64,7 @@ function Home() {
 						<button
 							className="home_link"
 							onClick={() => {
-								const audio = new Audio('/public/sounds/pokemon.intro.mp3');
+								const audio = new Audio('/sounds/pokemon.intro.mp3');
 								audio.volume = 0.5;
 								audio.play().catch(() => {});
 
